@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.mozilla</groupId>
+  <artifactId>rhino</artifactId>
+  <packaging>bundle</packaging>
+  <version>1.7R3.vivo_1</version>
+  <name>rhino osgified</name>
+
+  <properties>
+    <pkgVersion>1.7R3</pkgVersion>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>${project.artifactId}</artifactId>
+      <version>${pkgVersion}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>2.3.7</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Import-Package>
+              javax.swing*;resolution:=optional,
+              javax.xml*;resolution:=optional,
+              org.apache.xmlbeans*;resolution:=optional,
+              org.mozilla*;resolution:=optional,
+              org.w3c*;resolution:=optional,
+              org.xml*;resolution:=optional,
+              *
+            </Import-Package>
+            <Export-Package>
+              org.mozilla*;version=${pkgVersion};-split-package:=merge-first
+            </Export-Package>
+            <Embed-Dependency>*;scope=compile;inline=false</Embed-Dependency>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
