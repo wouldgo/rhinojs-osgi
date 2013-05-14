@@ -5,8 +5,8 @@
   <groupId>org.mozilla</groupId>
   <artifactId>rhino</artifactId>
   <packaging>bundle</packaging>
-  <version>1.7R4_osgified</version>
-  <name>rhino osgified</name>
+  <version>1.7R4.OSGIFIED</version>
+  <name>Mozilla Rhino OSGified</name>
 
   <properties>
     <pkgVersion>1.7R4</pkgVersion>
