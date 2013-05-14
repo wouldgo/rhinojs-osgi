@@ -5,11 +5,11 @@
   <groupId>org.mozilla</groupId>
   <artifactId>rhino</artifactId>
   <packaging>bundle</packaging>
-  <version>1.7R3.vivo_1</version>
+  <version>1.7R4_osgified</version>
   <name>rhino osgified</name>
 
   <properties>
-    <pkgVersion>1.7R3</pkgVersion>
+    <pkgVersion>1.7R4</pkgVersion>
   </properties>
 
   <dependencies>
